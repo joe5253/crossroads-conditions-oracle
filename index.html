@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#071214">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Crossroads Oracle">
+<meta name="description" content="Crossroads &amp; Conditions Oracle — a 60-card oracle of spiritual diagnosis, uncrossing and fate navigation.">
+<title>Crossroads &amp; Conditions Oracle</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071214'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23E0A85A' stroke-width='2.5'/%3E%3Cpath d='M18 46L46 18M18 18L46 46' stroke='%231F6A64' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M18 46L46 18M18 18L46 46' stroke='%23E0A85A' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M32 24l8 8-8 8-8-8z' fill='%23E0A85A' stroke='%23071214' stroke-width='2'/%3E%3C/svg%3E">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500&display=swap');
+
+  :root {
+    --bg: #071214;          /* midnight teal-black */
+    --bg2: #0A181B;
+    --comb: #10262A;        /* deep crossroads teal */
+    --comb-deep: #0C1F22;
+    --ember: #1F6A64;       /* verdigris teal */
+    --crimson: #1F6A64;
+    --crimson-hi: #3A9A90;
+    --gold: #E0A85A;        /* lantern amber */
+    --gold-glow: #F5CF8E;
+    --gold-soft: #9C6E33;
+    --gold-pale: #EFE0C6;
+    --emerald: #1F6A64;
+    --white: #F3EEE4;       /* bone */
+    --white-dim: #B9C4C2;
+    --comb-line: rgba(224, 168, 90, 0.055);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--bg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M0 0L48 48M48 0L0 48' fill='none' stroke='%23E0A85A' stroke-opacity='0.045' stroke-width='1'/%3E%3C/svg%3E");
+    color: var(--white);
+    font-family: 'Jost', sans-serif;
+    font-variant-numeric: lining-nums;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  svg.ico { width: 1.35rem; height: 1.35rem; display: block; }
+
+  /* -- ACCESS SCREEN -- */
+  #access-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: radial-gradient(ellipse at 50% 34%, rgba(31, 106, 100, 0.30) 0%, rgba(31, 106, 100, 0.10) 34%, transparent 68%);
+    text-align: center;
+  }
+
+  .lock-icon {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 1.4rem;
+    color: var(--gold);
+    animation: pulse 2.8s ease-in-out infinite;
+  }
+
+  .lock-icon svg { width: 100%; height: 100%; }
+
+  @keyframes pulse {
+    0%, 100% { filter: drop-shadow(0 0 12px rgba(58, 154, 144, 0.55)); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 30px rgba(224, 168, 90, 0.65)); transform: scale(1.05); }
+  }
+
+  .kicker {
+    font-size: 0.66rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+  }
+
+  #access-screen h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 7vw, 2.7rem);
+    line-height: 1.08;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    margin-bottom: 0.9rem;
+    max-width: 13ch;
+  }
+
+  #access-screen h1 em.tail { margin: 0.35rem 0 0; }
+
+  #access-screen h1 em {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold-pale);
+    font-size: 0.62em;
+    margin-bottom: 0.15rem;
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--gold);
+    margin: 0 auto 0.9rem;
+    width: 180px;
+  }
+
+  .ornament::before, .ornament::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-soft));
+  }
+
+  .ornament::after { background: linear-gradient(90deg, var(--gold-soft), transparent); }
+  .ornament svg { width: 12px; height: 12px; color: var(--crimson-hi); filter: drop-shadow(0 0 4px rgba(58, 154, 144, 0.6)); }
+
+  #access-screen .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.08rem;
+    color: var(--gold-pale);
+    margin-bottom: 2.2rem;
+  }
+
+  .access-box {
+    background: rgba(16, 38, 42, 0.62);
+    border: 1px solid rgba(224, 168, 90, 0.3);
+    border-radius: 16px;
+    padding: 2rem 2.2rem;
+    max-width: 380px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  }
+
+  .access-box label {
+    display: block;
+    font-size: 0.74rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    margin-bottom: 0.5rem;
+  }
+
+  .access-help {
+    font-size: 0.72rem;
+    color: rgba(239, 224, 198, 0.55);
+    text-align: center;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .access-box input {
+    width: 100%;
+    background: rgba(7, 18, 20, 0.85);
+    border: 1px solid rgba(224, 168, 90, 0.38);
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.2rem;
+  }
+
+  .access-box input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(224, 168, 90, 0.25);
+  }
+
+  .btn-enter {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold-glow) 0%, var(--gold) 45%, var(--gold-soft) 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 0.95rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #091618;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-enter:hover {
+    box-shadow: 0 0 25px rgba(224, 168, 90, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .error-msg {
+    color: #E0857C;
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+    display: none;
+  }
+
+  .access-footer {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    color: rgba(185, 196, 194, 0.42);
+    letter-spacing: 0.14em;
+  }
+
+  /* -- MAIN APP -- */
+  #app {
+    display: none;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(180deg, var(--comb) 0%, transparent 100%);
+    padding: 1.1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    border-bottom: 1px solid rgba(224, 168, 90, 0.16);
+  }
+
+  header h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: clamp(1.05rem, 3.8vw, 1.4rem);
+    line-height: 1.1;
+    color: var(--white);
+  }
+
+  header .deck-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+  }
+
+  .card-counter {
+    flex: 0 0 auto;
+    font-size: 0.72rem;
+    color: var(--gold-pale);
+    letter-spacing: 0.1em;
+    background: rgba(224, 168, 90, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(224, 168, 90, 0.24);
+    white-space: nowrap;
+  }
+
+  /* -- DECK VIEW -- */
+  #deck-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    background: radial-gradient(ellipse at 50% 42%, rgba(31, 106, 100, 0.24) 0%, rgba(224, 168, 90, 0.05) 36%, transparent 62%);
+  }
+
+  .deck-pile {
+    position: relative;
+    width: 200px;
+    height: 346px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .deck-pile:hover { transform: scale(1.03) translateY(-4px); }
+
+  .deck-card {
+    position: absolute;
+    width: 200px;
+    height: 346px;
+    border-radius: 14px;
+    background: radial-gradient(ellipse at 50% 50%, #12302F 0%, #050E10 45%, #071214 80%);
+    border: 2px solid rgba(224, 168, 90, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .deck-card:nth-child(1) { transform: rotate(-6deg) translate(-12px, 10px); opacity: 0.45; filter: brightness(0.7); }
+  .deck-card:nth-child(2) { transform: rotate(-3deg) translate(-6px, 5px); opacity: 0.65; filter: brightness(0.82); }
+  .deck-card:nth-child(3) { transform: rotate(3deg) translate(6px, 3px); opacity: 0.8; filter: brightness(0.9); }
+  .deck-card:nth-child(4) { transform: rotate(0deg); box-shadow: 0 14px 44px rgba(0, 0, 0, 0.7), 0 0 46px rgba(224, 168, 90, 0.3); }
+
+  .deck-card img { width: 100%; height: 100%; object-fit: cover; }
+
+  .deck-mark {
+    font-size: 3.2rem;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .deck-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 10px;
+    padding: 0.78rem 1.8rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold-glow) 0%, var(--gold) 45%, var(--gold-soft) 100%);
+    color: #091618;
+    box-shadow: 0 4px 20px rgba(224, 168, 90, 0.24);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 4px 30px rgba(224, 168, 90, 0.48);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: linear-gradient(135deg, rgba(31, 106, 100, 0.55) 0%, rgba(16, 38, 42, 0.85) 100%);
+    color: var(--gold-pale);
+    border: 1px solid rgba(224, 168, 90, 0.38);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(16, 38, 42, 0.95);
+    border-color: var(--gold);
+    color: var(--white);
+  }
+
+  .deck-hint {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--white-dim);
+    opacity: 0.75;
+    text-align: center;
+  }
+
+  /* -- DRAWN CARD -- */
+  #card-view {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1.5rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .card-scene {
+    perspective: 1000px;
+    width: min(320px, 85vw);
+    cursor: pointer;
+  }
+
+  .card-inner {
+    width: 100%;
+    position: relative;
+    transition: transform 0.15s ease;
+  }
+
+  .card-inner:active { transform: scale(0.97); }
+
+  .card-face, .card-back {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 54px rgba(224, 168, 90, 0.24);
+    border: 2px solid rgba(224, 168, 90, 0.5);
+  }
+
+  .card-back {
+    aspect-ratio: 0.579;
+    background: radial-gradient(ellipse at 50% 50%, #12302F 0%, #050E10 45%, #071214 80%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .card-back.has-image { background: none; padding: 0; }
+
+  .card-back.has-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card-back .tap-hint {
+    position: absolute;
+    left: 0; right: 0; bottom: 9%;
+    font-size: 0.7rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(239, 224, 198, 0.8);
+    text-align: center;
+    animation: blink 2s ease-in-out infinite;
+  }
+
+  .card-back .mark-large {
+    font-size: 4.5rem;
+    color: var(--gold);
+    opacity: 0.75;
+  }
+
+  .card-back.has-image .mark-large { display: none; }
+
+  @keyframes blink {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 1; }
+  }
+
+  .card-face {
+    display: none;
+    position: relative;
+    background: #000;
+    animation: reveal 0.55s ease;
+  }
+
+  @keyframes reveal {
+    0% { transform: rotateY(90deg) scale(0.96); opacity: 0.4; }
+    100% { transform: rotateY(0) scale(1); opacity: 1; }
+  }
+
+  .card-face img { width: 100%; display: block; }
+
+  /* -- Reading panel -- */
+  .reading-hint {
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    opacity: 0.65;
+    text-align: center;
+  }
+
+  .reading-panel {
+    width: min(360px, 90vw);
+    background: linear-gradient(170deg, rgba(16, 38, 42, 0.78) 0%, rgba(10, 24, 27, 0.78) 100%);
+    border: 1px solid rgba(224, 168, 90, 0.28);
+    border-radius: 16px;
+    padding: 1.5rem 1.4rem 1.2rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .reading-category {
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 0.35rem;
+    font-weight: 500;
+  }
+
+  .reading-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: clamp(1.2rem, 4.8vw, 1.5rem);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .reading-keywords {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--gold-pale);
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid rgba(224, 168, 90, 0.22);
+  }
+
+  .card-section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.9;
+    margin-bottom: 0.35rem;
+    margin-top: 1rem;
+  }
+
+  .card-section-label:first-of-type { margin-top: 0; }
+
+  .card-message {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.42;
+    color: var(--white);
+    text-align: center;
+  }
+
+  .card-meaning {
+    font-size: 0.84rem;
+    line-height: 1.68;
+    color: var(--white-dim);
+  }
+
+  .card-reflection {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    color: var(--gold-pale);
+    border-left: 2px solid var(--crimson-hi);
+    padding-left: 0.8rem;
+    margin-top: 0.3rem;
+  }
+
+  .card-affirmation {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    color: var(--gold-glow);
+    text-align: center;
+    margin-top: 1.1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(224, 168, 90, 0.22);
+  }
+
+  .card-footer-brand {
+    margin-top: 1rem;
+    padding-top: 0.6rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(185, 196, 194, 0.36);
+    text-align: center;
+  }
+
+  .card-view-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-info-bar {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.74rem;
+    color: var(--white-dim);
+    opacity: 0.6;
+  }
+
+  /* -- ALL CARDS VIEW -- */
+  #all-cards-view {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .search-bar {
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+    border-bottom: 1px solid rgba(224, 168, 90, 0.1);
+  }
+
+  .search-bar input {
+    width: 100%;
+    background: rgba(16, 38, 42, 0.6);
+    border: 1px solid rgba(224, 168, 90, 0.28);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.86rem;
+    color: var(--white);
+    outline: none;
+  }
+
+  .search-bar input::placeholder { color: rgba(185, 196, 194, 0.42); }
+  .search-bar input:focus { border-color: var(--gold); }
+
+  .category-tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .category-tabs::-webkit-scrollbar { display: none; }
+
+  .cat-tab {
+    white-space: nowrap;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    padding: 0.42rem 0.95rem;
+    border-radius: 20px;
+    border: 1px solid rgba(224, 168, 90, 0.22);
+    color: var(--white-dim);
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .cat-tab.active, .cat-tab:hover {
+    background: rgba(224, 168, 90, 0.18);
+    border-color: var(--gold);
+    color: var(--white);
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 1rem 1.5rem 2rem;
+    overflow-y: auto;
+  }
+
+  .mini-card {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    background: rgba(16, 38, 42, 0.6);
+    border: 1px solid rgba(224, 168, 90, 0.17);
+    border-radius: 12px;
+    padding: 0.7rem 0.9rem 0.7rem 0.7rem;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+
+  .mini-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(224, 168, 90, 0.18);
+    transform: translateY(-2px);
+  }
+
+  .mini-thumb {
+    width: 48px;
+    flex: 0 0 48px;
+    aspect-ratio: 0.579;
+    border-radius: 5px;
+    object-fit: cover;
+    background: rgba(224, 168, 90, 0.08);
+  }
+
+  .mini-body { min-width: 0; flex: 1; }
+
+  .mini-card-num {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+  }
+
+  .mini-card-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: 0.95rem;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+    line-height: 1.15;
+  }
+
+  .mini-card-truth {
+    font-size: 0.74rem;
+    color: var(--white-dim);
+    opacity: 0.75;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* -- JOURNAL -- */
+  #history-view {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.2rem 1.5rem 2rem;
+    gap: 1rem;
+    overflow-y: auto;
+  }
+
+  .history-summary {
+    background: rgba(16, 38, 42, 0.62);
+    border: 1px solid rgba(224, 168, 90, 0.26);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+  }
+
+  .history-summary-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.6rem;
+  }
+
+  .history-count {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--white);
+  }
+
+  .history-count span {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    opacity: 0.78;
+    margin-left: 0.4rem;
+  }
+
+  .history-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.35rem;
+  }
+
+  .history-repeat {
+    font-size: 0.8rem;
+    color: var(--white-dim);
+    line-height: 1.7;
+  }
+
+  .history-repeat b {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .history-day {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    opacity: 0.72;
+    margin: 0.6rem 0 0.1rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid rgba(224, 168, 90, 0.17);
+  }
+
+  .history-entry {
+    display: flex;
+    gap: 0.7rem;
+    padding: 0.7rem 0 0.5rem;
+    border-bottom: 1px solid rgba(224, 168, 90, 0.08);
+  }
+
+  .history-thumb {
+    width: 42px;
+    flex: 0 0 42px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgba(224, 168, 90, 0.08);
+  }
+
+  .history-body { flex: 1; min-width: 0; }
+
+  .history-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: 0.9rem;
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .history-meta {
+    font-size: 0.66rem;
+    color: var(--white-dim);
+    opacity: 0.62;
+    margin-bottom: 0.35rem;
+  }
+
+  .history-note {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed rgba(224, 168, 90, 0.28);
+    padding: 0.2rem 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--gold-pale);
+    outline: none;
+  }
+
+  .history-note::placeholder { color: rgba(185, 196, 194, 0.34); font-style: italic; }
+  .history-note:focus { border-bottom-color: var(--gold); }
+
+  .history-empty {
+    text-align: center;
+    color: var(--white-dim);
+    opacity: 0.68;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 2.5rem 1rem;
+  }
+
+  .history-actions {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.4rem;
+  }
+
+  .history-actions .btn { padding: 0.6rem 1.2rem; font-size: 0.7rem; }
+
+  .history-actions .btn-danger {
+    background: rgba(31, 106, 100, 0.92);
+    border-color: #E0857C;
+    color: var(--white);
+  }
+
+  .history-hint {
+    font-size: 0.64rem;
+    color: var(--white-dim);
+    opacity: 0.5;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* -- NAV BAR -- */
+  nav {
+    display: flex;
+    background: rgba(7, 18, 20, 0.95);
+    border-top: 1px solid rgba(224, 168, 90, 0.17);
+    padding: 0.45rem 0 calc(0.45rem + env(safe-area-inset-bottom));
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.28rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Jost', sans-serif;
+    color: rgba(185, 196, 194, 0.45);
+  }
+
+  .nav-btn .nav-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .nav-btn.active, .nav-btn:hover { color: var(--gold-pale); }
+  .nav-btn.active .ico { color: var(--gold); filter: drop-shadow(0 0 6px rgba(224, 168, 90, 0.7)); }
+
+  /* -- ANIMATIONS -- */
+  @keyframes shuffle {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    20%  { transform: translate(-15px, -5px) rotate(-5deg); }
+    40%  { transform: translate(15px, -8px) rotate(5deg); }
+    60%  { transform: translate(-8px, 5px) rotate(-2deg); }
+    80%  { transform: translate(8px, 3px) rotate(3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+
+  .shuffling .deck-card:nth-child(4) { animation: shuffle 0.6s ease-in-out 3; }
+
+  /* -- SPREAD VIEW -- */
+  #spread-view {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    overflow-y: auto;
+  }
+
+  .spread-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: 1.4rem;
+    line-height: 1.1;
+    color: var(--white);
+    text-align: center;
+  }
+
+  .spread-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.9;
+    text-align: center;
+    margin-top: -1.1rem;
+  }
+
+  .spread-picker {
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .spread-picker-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    opacity: 0.8;
+  }
+
+  .spread-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .spread-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(224, 168, 90, 0.3);
+    user-select: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    padding: 0.5rem 0.95rem;
+    border-radius: 22px;
+    border: 1px solid rgba(224, 168, 90, 0.34);
+    background: rgba(16, 38, 42, 0.62);
+    color: var(--white-dim);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .spread-tab-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 50%;
+    background: rgba(224, 168, 90, 0.18);
+    color: var(--gold-pale);
+    font-size: 0.64rem;
+    line-height: 1;
+  }
+
+  .spread-tab:hover {
+    border-color: var(--gold);
+    color: var(--white);
+    transform: translateY(-1px);
+  }
+
+  .spread-tab.active {
+    background: linear-gradient(135deg, var(--gold-glow) 0%, var(--gold) 45%, var(--gold-soft) 100%);
+    border-color: var(--gold);
+    color: #091618;
+    font-weight: 500;
+    box-shadow: 0 2px 14px rgba(224, 168, 90, 0.32);
+  }
+
+  .spread-tab.active .spread-tab-num {
+    background: rgba(7, 18, 20, 0.3);
+    color: var(--white);
+  }
+
+  .spread-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.02rem;
+    color: var(--white-dim);
+    opacity: 0.82;
+    text-align: center;
+    max-width: 460px;
+    line-height: 1.45;
+    margin-top: -0.6rem;
+  }
+
+  .spread-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .spread-card-slot {
+    aspect-ratio: 0.579;
+    border-radius: 10px;
+    border: 1px solid rgba(224, 168, 90, 0.3);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+
+  .spread-card-slot.unrevealed {
+    background: radial-gradient(ellipse at 50% 50%, #12302F 0%, #050E10 45%, #071214 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .spread-card-slot.unrevealed:hover {
+    box-shadow: 0 0 20px rgba(224, 168, 90, 0.42);
+    transform: translateY(-3px);
+  }
+
+  .spread-slot-pos {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 0.9rem 0.3rem 0.4rem;
+    background: linear-gradient(0deg, rgba(7, 18, 20, 0.92) 0%, rgba(7, 18, 20, 0.0) 100%);
+    font-size: 0.54rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    text-align: center;
+  }
+
+  .spread-card-slot.revealed {
+    aspect-ratio: auto;
+    background: linear-gradient(160deg, var(--comb) 0%, var(--bg) 100%);
+    border-color: rgba(224, 168, 90, 0.48);
+    padding: 0.55rem 0.5rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spread-slot-img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 0.45rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .spread-slot-read {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.9;
+    margin-top: auto;
+    padding-top: 0.3rem;
+  }
+
+  .spread-slot-label {
+    font-size: 0.56rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+  }
+
+  .spread-slot-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: 0.72rem;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 0.2rem;
+  }
+
+  .spread-slot-hint {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.74rem;
+    color: var(--white-dim);
+    opacity: 0.72;
+    line-height: 1.25;
+    margin-bottom: 0.3rem;
+  }
+
+  .spread-mark { font-size: 1.6rem; color: var(--gold); opacity: 0.6; }
+
+  @media (max-width: 380px) {
+    .spread-grid { gap: 0.5rem; }
+    .btn { padding: 0.72rem 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-jar" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+      <path d="M32 2v6M32 56v6M2 32h6M56 32h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M17.5 46.5L46.5 17.5M17.5 17.5L46.5 46.5" stroke="#1F6A64" stroke-width="8" stroke-linecap="round"/>
+      <path d="M17.5 46.5L46.5 17.5M17.5 17.5L46.5 46.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+      <path d="M32 22.5l9.5 9.5-9.5 9.5-9.5-9.5z" fill="#071214" stroke="currentColor" stroke-width="2"/>
+      <path d="M32 27.5l4.5 4.5-4.5 4.5-4.5-4.5z" fill="currentColor"/>
+      <circle cx="17.5" cy="17.5" r="1.8" fill="currentColor"/>
+      <circle cx="46.5" cy="17.5" r="1.8" fill="currentColor"/>
+      <circle cx="17.5" cy="46.5" r="1.8" fill="currentColor"/>
+      <circle cx="46.5" cy="46.5" r="1.8" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-diamond" viewBox="0 0 12 12"><path d="M6 0l6 6-6 6-6-6z" fill="currentColor"/></symbol>
+    <symbol id="i-pull" viewBox="0 0 24 24">
+      <rect x="6.5" y="3.5" width="11" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M4 6.5v12a2 2 0 002 2M20 6.5v12a2 2 0 01-2 2" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.6"/>
+      <path d="M12 8.5l1 2.1 2.2 1-2.2 1L12 14.8l-1-2.2-2.2-1 2.2-1z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-spread" viewBox="0 0 24 24">
+      <rect x="1.8" y="6" width="6" height="10" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="9" y="4" width="6" height="10" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="16.2" y="6" width="6" height="10" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M5 19.5h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24">
+      <path d="M7 3.5l3.5 2v4L7 11.5l-3.5-2v-4zM17 3.5l3.5 2v4L17 11.5l-3.5-2v-4zM12 12.5l3.5 2v4L12 20.5l-3.5-2v-4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-journal" viewBox="0 0 24 24">
+      <path d="M6 3.5h11a1.5 1.5 0 011.5 1.5v15H7a2 2 0 01-2-2V4.5a1 1 0 011-1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M5 18a2 2 0 012-2h11.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M12 6.5l2.6 3.9-2.6 3.9-2.6-3.9z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ACCESS SCREEN -->
+<div id="access-screen">
+  <div class="lock-icon"><svg><use href="#i-jar"/></svg></div>
+  <p class="kicker">A 60-Card Oracle</p>
+  <h1>Crossroads &amp; Conditions<em class="tail">Oracle</em></h1>
+  <div class="ornament"><svg><use href="#i-diamond"/></svg></div>
+  <p class="subtitle">Spiritual diagnosis, uncrossing &amp; fate navigation</p>
+
+  <div class="access-box">
+    <label for="code-input">Enter Your Access Code</label>
+    <p class="access-help">Type your code, then tap Unlock</p>
+    <input type="text" id="code-input" placeholder="" maxlength="20"
+      autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false">
+    <button class="btn-enter" onclick="checkCode()">Open the Road</button>
+    <div class="error-msg" id="error-msg">That code doesn't open the road. Check it and try again.</div>
+  </div>
+
+  <p class="access-footer">PsychicSoulStar · Crossroads &amp; Conditions Oracle</p>
+</div>
+
+<!-- MAIN APP -->
+<div id="app">
+  <header>
+    <div>
+      <span class="deck-badge">Oracle · 60 Cards</span>
+      <h1>Crossroads &amp; Conditions</h1>
+    </div>
+    <span class="card-counter" id="counter">60 Cards</span>
+  </header>
+
+  <!-- DECK VIEW -->
+  <div id="deck-view">
+    <div class="deck-pile" id="deck-pile" onclick="drawCard()">
+      <div class="deck-card"></div>
+      <div class="deck-card"></div>
+      <div class="deck-card"></div>
+      <div class="deck-card">
+        <img src="card_back.webp" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="deck-mark" style="display:none;">✦</span>
+      </div>
+    </div>
+    <div class="deck-actions">
+      <button class="btn btn-primary" onclick="shuffleDeck()">✦ Shuffle</button>
+      <button class="btn btn-secondary" onclick="drawCard()">Pull a Card</button>
+    </div>
+    <p class="deck-hint">Hold your question in mind, then tap the deck</p>
+  </div>
+
+  <!-- DRAWN CARD VIEW -->
+  <div id="card-view">
+    <div class="card-scene" id="card-scene" onclick="flipCard()">
+      <div class="card-inner" id="card-inner">
+        <div class="card-back has-image" id="card-back-el">
+          <img src="card_back.webp" alt="Crossroads &amp; Conditions Oracle — card back" onerror="this.parentElement.classList.remove('has-image'); this.remove();">
+          <span class="mark-large">✦</span>
+          <span class="tap-hint">Tap to reveal</span>
+        </div>
+        <div class="card-face" id="card-face"></div>
+      </div>
+    </div>
+
+    <p class="reading-hint" id="reading-hint" style="display:none;">Scroll down for the full reading</p>
+
+    <div class="reading-panel" id="reading-panel" style="display:none;"></div>
+
+    <div class="card-info-bar">
+      <span id="drawn-count">Card pulled</span>
+      <span>·</span>
+      <span>Tap card to reveal</span>
+    </div>
+
+    <div class="card-view-actions" id="card-view-actions"></div>
+  </div>
+
+  <!-- ALL CARDS VIEW -->
+  <div id="all-cards-view">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search all 60 cards — road, mirror, cleanse..."
+        oninput="filterCards()" autocomplete="off">
+    </div>
+    <div class="category-tabs" id="cat-tabs"></div>
+    <div class="cards-grid" id="cards-grid"></div>
+  </div>
+
+  <!-- JOURNAL VIEW -->
+  <div id="history-view">
+    <div class="history-summary" id="history-summary"></div>
+    <div class="history-list" id="history-list"></div>
+    <div class="history-actions">
+      <button type="button" class="btn btn-secondary" onclick="exportHistory(this)">Copy my journal</button>
+      <button type="button" class="btn btn-secondary" onclick="clearHistory(this)">Clear</button>
+    </div>
+    <p class="history-hint">Saved on this device only. Clearing your browser data erases it —
+      use Copy my journal to keep a permanent record.</p>
+  </div>
+
+  <!-- SPREAD VIEW -->
+  <div id="spread-view">
+    <div class="spread-picker">
+      <span class="spread-picker-label">Choose a spread</span>
+      <div class="spread-tabs" id="spread-tabs">
+      <button type="button" class="spread-tab" data-spread="0"><span class="spread-tab-num">1</span>The Daily Lantern</button>
+      <button type="button" class="spread-tab active" data-spread="1"><span class="spread-tab-num">3</span>The Three Roads</button>
+      <button type="button" class="spread-tab" data-spread="2"><span class="spread-tab-num">3</span>The Condition Check</button>
+      <button type="button" class="spread-tab" data-spread="3"><span class="spread-tab-num">4</span>The Four Movements</button>
+      <button type="button" class="spread-tab" data-spread="4"><span class="spread-tab-num">5</span>The Uncrossing Cross</button>
+      </div>
+    </div>
+    <p class="spread-title" id="spread-title"></p>
+    <p class="spread-subtitle" id="spread-subtitle"></p>
+    <div class="spread-grid" id="spread-grid"></div>
+    <p class="spread-note" id="spread-note"></p>
+    <button class="btn btn-primary" onclick="newSpread()">New Spread</button>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav>
+    <button class="nav-btn active" id="nav-deck" onclick="switchView('deck')">
+      <svg class="ico"><use href="#i-pull"/></svg>
+      <span class="nav-label">Pull</span>
+    </button>
+    <button class="nav-btn" id="nav-spread" onclick="switchView('spread')">
+      <svg class="ico"><use href="#i-spread"/></svg>
+      <span class="nav-label">Spreads</span>
+    </button>
+    <button class="nav-btn" id="nav-all" onclick="switchView('all')">
+      <svg class="ico"><use href="#i-grid"/></svg>
+      <span class="nav-label">All 60</span>
+    </button>
+    <button class="nav-btn" id="nav-history" onclick="switchView('history')">
+      <svg class="ico"><use href="#i-journal"/></svg>
+      <span class="nav-label">Journal</span>
+    </button>
+  </nav>
+</div>
+
+<script>
+
+// -- CARD DATA --
+const CATEGORIES = ["The Crossroads", "The Conditions", "The Warnings", "The Interventions"];
+
+const CAT_TABS = ["✦ Crossroads", "◆ Conditions", "❖ Warnings", "✵ Interventions"];
+
+const CARDS = [
+  {"id": 1, "cat": 0, "name": "THE MIDNIGHT CROSSROADS", "keywords": "Major decision · Turning point · Free will · No compromise", "message": "You stand at the midnight crossroads. A pivotal decision awaits; choose your path wisely, for it will alter your destiny.", "meaning": "The Midnight Crossroads is the moment of choosing. You have reached a fork in your life where you cannot walk both roads and cannot hand the choice to anyone else. This card asks you to stop waiting for a sign that makes it easy. Look honestly at where each path leads, listen to your gut, and decide. Whatever you choose will shape the next chapter, so choose it on purpose.", "reflection": "Which decision have I been avoiding because I want to keep both doors open?", "affirmation": "I choose my path with clarity, and I walk it with courage."},
+  {"id": 2, "cat": 0, "name": "THE SUDDEN SHIFT", "keywords": "Sudden change · Reversal · Plot twist · Adaptability", "message": "The winds of fate are changing direction abruptly. Brace yourself for a sudden shift that turns the tables completely.", "meaning": "The Sudden Shift is a turn you did not see coming. A situation that seemed fixed is about to flip, sometimes overnight. This card asks you to stay loose and ready rather than gripping the old plan. Change this fast can feel unsettling, but it also clears out what was stuck. Keep your footing, adapt quickly, and look for the opening the new wind is creating.", "reflection": "Where am I holding on so tightly that a sudden change would knock me over?", "affirmation": "I bend with the winds of change, and I land on my feet."},
+  {"id": 3, "cat": 0, "name": "THE OPEN ROAD", "keywords": "Clear path · Green light · Momentum · Go now", "message": "The blockages have vanished. The road ahead is wide open and blessed. Move forward with absolute confidence.", "meaning": "The Open Road is the green light you have been waiting for. The obstacles that held you back have cleared, and the way forward is open and blessed. This is the best moment to move toward your goal. Do not waste it second-guessing. Make the call, send the application, take the trip. When the road is this clear, hesitation is the only thing that can slow you down.", "reflection": "What would I do today if I truly believed nothing was in my way?", "affirmation": "My road is open and blessed, and I move forward with confidence."},
+  {"id": 4, "cat": 0, "name": "THE CROSSED PATH", "keywords": "Blockage · Stalled progress · Envy · Cleanse", "message": "You have stepped into crossed conditions. Unseen forces or envious eyes are temporarily blocking your progress. Cleanse your energy.", "meaning": "The Crossed Path means something is in your way. Plans stall, doors that should open stay shut, and effort does not bring the usual result. This card says the block may come from envy, bad energy around you, or simply a heavy season. It is temporary. Clean your space, clear your energy, and be careful who you share your plans with until the path opens again.", "reflection": "Where do I feel blocked, and who knows more about my plans than they should?", "affirmation": "I clear what blocks me, and my path opens again."},
+  {"id": 5, "cat": 0, "name": "THE FATEFUL ENCOUNTER", "keywords": "Destined meeting · New ally · Soul connection · Breakthrough", "message": "A destined meeting is on the horizon. Someone entering your life holds the key to your next major breakthrough.", "meaning": "The Fateful Encounter is a meeting that was meant to happen. Someone is coming into your life who will change its direction: a partner, a mentor, a collaborator or a new love. This card asks you to stay open and show up. Say yes to the invitation, start the conversation, go to the room. You will recognise this person by how naturally things move once you meet.", "reflection": "Am I open enough to notice the person who is meant to change my path?", "affirmation": "I welcome the destined people who are walking toward me."},
+  {"id": 6, "cat": 0, "name": "THE BLIND ALLEY", "keywords": "Dead end · Wasted effort · Let go · Redirect", "message": "You are pouring energy into a dead end. Accept the truth, turn around, and redirect your magic elsewhere.", "meaning": "The Blind Alley is a road that goes nowhere. You are putting time, money or love into something that is not going to give back. This card is not a judgment on you; it is a mercy. The sooner you admit the wall is there, the sooner you get your energy back. Step away, take what you learned, and point your effort somewhere it can actually grow.", "reflection": "What am I still feeding that has already shown me it will not grow?", "affirmation": "I release dead ends, and I give my energy to what can bloom."},
+  {"id": 7, "cat": 0, "name": "THE STAGNANT WATER", "keywords": "Stagnation · Stuck energy · Inertia · Stir things up", "message": "The energy has gone stale and stagnant. It is time to stir the waters and force movement in your situation.", "meaning": "The Stagnant Water is a situation that has stopped moving. Nothing is getting worse, but nothing is getting better either, and the stillness is starting to go sour. This card says waiting will not fix it. Make a small move that changes the flow: a new routine, an honest conversation, a cleaned-out room, a decision you have been sitting on. Movement brings life back.", "reflection": "What small action would get the energy moving again this week?", "affirmation": "I stir the waters, and fresh energy flows back into my life."},
+  {"id": 8, "cat": 0, "name": "THE HIDDEN BLESSING", "keywords": "Blessing in disguise · Protection · Loss that frees · Trust", "message": "What feels like a loss is a disguised divine protection. The universe removed it to make room for a massive blessing.", "meaning": "The Hidden Blessing is a loss that turns out to be a gift. Something ended, left or fell through, and it hurt. This card says you were protected, not punished. What was removed was making room for something better or keeping you from something worse. Let yourself grieve what you lost, and then keep your eyes open. The reason will show itself in time.", "reflection": "What loss in my life might actually have been a door closing for my protection?", "affirmation": "What leaves my life makes room for my greater blessing."},
+  {"id": 9, "cat": 0, "name": "THE TOLL BRIDGE", "keywords": "Price of progress · Sacrifice · Commitment · Fair exchange", "message": "Every crossing requires a toll. You must sacrifice something of value to unlock the next level of your journey.", "meaning": "The Toll Bridge says nothing worth having comes free. To cross into the next level, you will have to give something: time, money, comfort or an old habit. This card asks you to name the price honestly and decide whether the other side is worth it. If it is, pay willingly and do not look back. A toll paid with intention is an investment, not a loss.", "reflection": "What price am I avoiding paying for the life I say I want?", "affirmation": "I pay the fair price for my growth, and I cross with purpose."},
+  {"id": 10, "cat": 0, "name": "THE SHORTCUT", "keywords": "Temptation · Quick fix · Hidden cost · Think twice", "message": "A tempting shortcut has appeared. It promises rapid results, but be extremely cautious of the hidden costs and spiritual consequences.", "meaning": "The Shortcut is an offer that looks fast and easy. It may be a deal, a scheme, a person or a way around the hard work. This card does not say never take it; it says read the fine print first. What comes too quickly often leaves just as quickly, and some shortcuts cost more than the long road. Check who benefits, what you give up, and whether you could live with the worst case.", "reflection": "Is this shortcut really saving me time, or just postponing the cost?", "affirmation": "I choose paths that hold, even when they take longer."},
+  {"id": 11, "cat": 0, "name": "THE HEAVY BURDEN", "keywords": "Overload · Others' problems · Stress · Put it down", "message": "You are carrying bags that do not belong to you. Drop the heavy burdens so your spirit can rise and attract wealth again.", "meaning": "The Heavy Burden is weight you were never meant to carry. You have taken on other people's problems, debts or emotions, and the stress is draining the energy you need for your own life. This card asks you to set some of it down. You can care about people without carrying them. Hand back what is not yours, and watch how much lighter and more magnetic you become.", "reflection": "Which of the weights I carry actually belongs to someone else?", "affirmation": "I set down what is not mine, and my spirit rises."},
+  {"id": 12, "cat": 0, "name": "THE U-TURN", "keywords": "Change of heart · Course correction · Second chance · Turn back", "message": "It is never too late to turn back. Correct your course now before you walk too far down the wrong path.", "meaning": "The U-Turn gives you permission to change your mind. You may have started down a road that no longer feels right, and pride or effort already spent is keeping you on it. This card says it is not too late. Turning back is not failure; it is wisdom. Admit the mistake, make the correction now, and return to solid ground before the road takes you further from where you belong.", "reflection": "Where am I staying on the wrong road only because I have already come this far?", "affirmation": "I am free to change course, and I turn toward what is right for me."},
+  {"id": 13, "cat": 0, "name": "THE UNSEEN OBSTACLE", "keywords": "Hidden problem · Weak foundation · Trap · Look closer", "message": "Proceed with extreme caution. There is a hidden trap or an unseen obstacle waiting just beneath the surface of this situation.", "meaning": "The Unseen Obstacle is the problem you have not spotted yet. Something under the surface is weak, or someone is setting a trap you cannot see from where you stand. This card asks you to slow down and check everything. Read the contract, test the foundation, ask the question you have been skipping. What you find now will save you from a much harder fall later.", "reflection": "What detail have I been too rushed or too hopeful to examine?", "affirmation": "I see beneath the surface, and I walk safely around every trap."},
+  {"id": 14, "cat": 0, "name": "THE LEAP OF FAITH", "keywords": "All in · Courage · Trust · Jump", "message": "The time for planning is over. Close your eyes, trust your spiritual team, and take the terrifying leap of faith.", "meaning": "The Leap of Faith is the moment when planning ends and action begins. You have prepared as much as you can, and more thinking will not make the gap smaller. This card asks you to commit fully, trust your guides and jump. It will feel frightening, and that is normal. Faith is not the absence of fear; it is moving forward with it. The ground will meet you.", "reflection": "What leap have I prepared for long enough?", "affirmation": "I trust my guides, and I leap with faith."},
+  {"id": 15, "cat": 0, "name": "THE CLEAR VISION", "keywords": "Clarity · Truth revealed · Insight · Decisive action", "message": "The fog has lifted. You now see the situation, the people, and the true conditions with absolute, undeniable clarity.", "meaning": "The Clear Vision is the moment the fog lifts. You finally see the situation, the people and your own part in it exactly as they are. This card says you can stop guessing. Trust what you now know, even if it is not what you hoped. Clear sight makes clean decisions possible, so act on it while it is fresh. This card completes The Crossroads.", "reflection": "Now that I see clearly, what decision is obvious?", "affirmation": "I see the truth clearly, and I act on it with confidence."},
+  {"id": 16, "cat": 1, "name": "THE CROSSED CONDITION", "keywords": "Blocked energy · Bad luck streak · Negativity · Uncross", "message": "You are experiencing a crossed condition. Unseen negativity is blocking your flow; it is time for a deep spiritual uncrossing.", "meaning": "The Crossed Condition describes a state where nothing seems to take. You try, and it stalls; you push, and it pushes back. This card says heavy energy has settled around you, whether from a hard season, other people's envy or your own exhaustion. It is a condition, not a sentence. Clean your body, your home and your thoughts, cut back on what drains you, and begin your uncrossing.", "reflection": "Where in my life does everything feel harder than it should?", "affirmation": "I clear the heaviness around me, and my flow returns."},
+  {"id": 17, "cat": 1, "name": "THE UNCROSSED SPIRIT", "keywords": "Release · Renewal · Lightness · Flow restored", "message": "The blockages have been dissolved. Your spirit is uncrossed, and pure positive energy is now flowing freely into your life.", "meaning": "The Uncrossed Spirit is the relief after the heaviness lifts. The block is gone, the bad streak is broken and your energy feels clean and light again. This card says you are free to move forward. Protect this fresh state: keep up the habits that cleared you, and notice how quickly good things start finding you now that the way is open.", "reflection": "What helped me feel lighter, and how can I keep doing it?", "affirmation": "My spirit is clear, and blessings flow freely to me."},
+  {"id": 18, "cat": 1, "name": "THE SWEETENED STATE", "keywords": "Favour · Charm · Goodwill · Easy attraction", "message": "Your aura is dipped in honey. You are in a sweetened state where favors, love, and opportunities are naturally drawn to you.", "meaning": "The Sweetened State is a season of favour. People are kind to you, doors open easily and others want to help. This card says your energy is warm and inviting right now. Use it well: ask for what you need, reach out to the people you want on your side, and let yourself receive. Sweetness grows when it is shared, so pass some of it on.", "reflection": "What could I ask for right now while the energy is in my favour?", "affirmation": "I am sweet to the world, and the world is sweet to me."},
+  {"id": 19, "cat": 1, "name": "THE SOURING JAR", "keywords": "Bitterness · Conflict · Toxic space · Step back", "message": "The environment has turned sour. Bitterness and arguments are brewing; protect your peace and step away from the toxic energy.", "meaning": "The Souring Jar describes a place or relationship that has turned bitter. Arguments flare, resentment builds and the atmosphere feels poisoned. This card asks you to protect your peace before it sours you too. You do not have to win every argument or fix every person. Step back, limit your time in the bitter space, and keep your own heart from turning sour along with it.", "reflection": "Which space or relationship leaves a bitter taste every time I leave it?", "affirmation": "I protect my peace, and bitterness cannot settle in me."},
+  {"id": 20, "cat": 1, "name": "THE HOT FOOT", "keywords": "Moving on · Removal · Time to go · Clear the space", "message": "The ground is getting too hot. Toxic people are being driven away from you, or it is your sign to leave immediately.", "meaning": "The Hot Foot is the energy of leaving. Either someone harmful is about to move out of your life, or you are the one who needs to walk away from a place that no longer serves you. This card says the situation will not cool down on its own. If people are leaving, let them go. If it is your sign to go, pack up and move without waiting for permission.", "reflection": "Is it time for someone else to leave, or for me to go?", "affirmation": "I leave what harms me, and what harms me leaves me."},
+  {"id": 21, "cat": 1, "name": "THE FREEZER", "keywords": "Pause · Stillness · Quieted conflict · Breathing room", "message": "The situation has been put on ice. Drama, gossip, and conflicts are frozen and neutralized, giving you time to breathe.", "meaning": "The Freezer is a pause button. Drama has gone quiet, an enemy has stopped talking, or a heated situation has cooled. This card can also mean feelings that have gone cold. Either way, the stillness is giving you time. Use it to breathe, rest and plan. Do not stir the situation back up; let it stay frozen while you decide your next move.", "reflection": "How can I use this quiet time to strengthen my position?", "affirmation": "Conflict cools around me, and I rest in peace."},
+  {"id": 22, "cat": 1, "name": "THE HEAVY YOKE", "keywords": "Emotional weight · Pressure · Expectations · Release", "message": "You are carrying a spiritual heavy yoke. Release the burdens that are not yours to bear before they break your spirit.", "meaning": "The Heavy Yoke is the weight of other people's expectations. You may be carrying a family role, a job you have outgrown or a version of yourself you were told to be. This card says the pressure is bending you. You are allowed to loosen it. Choose which duties are truly yours, honour those, and gently set the rest down before your spirit breaks under it.", "reflection": "Whose expectations am I living under that I never agreed to?", "affirmation": "I release the yoke that is not mine, and I stand tall."},
+  {"id": 23, "cat": 1, "name": "THE WALL OF FIRE", "keywords": "Protection · Spiritual shield · Safety · Strength", "message": "You are surrounded by a wall of fire. No evil intent or spiritual attack can penetrate your fiercely protected energy field.", "meaning": "The Wall of Fire is the strongest protection in the deck. You are shielded, and the bad intentions of others cannot reach you right now. This card says you can stop worrying about what others are plotting. Focus on your own work. Keep your protection strong with clean habits, good company and prayer, and let the fire do its job.", "reflection": "What would I do with my energy if I stopped bracing for attack?", "affirmation": "I am surrounded by fierce protection, and no harm can reach me."},
+  {"id": 24, "cat": 1, "name": "THE BOUND HANDS", "keywords": "Restriction · Waiting · Out of your control · Patience", "message": "Your hands are temporarily tied. Do not force action right now; wait patiently for the right moment to break free from these restrictions.", "meaning": "The Bound Hands is a moment when you cannot act. The decision belongs to someone else, or circumstances are holding you in place. This card asks you not to struggle against the ropes, because forcing it now will only tighten them. Wait, prepare quietly and watch for the moment the knot loosens. When it does, you will be ready to move fast.", "reflection": "What can I prepare now, while I wait for this to loosen?", "affirmation": "I wait with patience, and I move when the moment is right."},
+  {"id": 25, "cat": 1, "name": "THE BLINDED EYE", "keywords": "Deception · Missing information · Illusion · Seek truth", "message": "You are operating under a blinded condition. Someone is hiding the truth from you; seek clarity before making your next move.", "meaning": "The Blinded Eye means you are not seeing the whole picture. Information is being kept from you, or someone is presenting a version of events that is not true. This card asks you to hold off on big decisions until you have the facts. Ask direct questions, check sources and pay attention to what does not add up. The truth is there; it just has not reached you yet.", "reflection": "What question have I been afraid to ask directly?", "affirmation": "I seek the truth, and the truth is revealed to me."},
+  {"id": 26, "cat": 1, "name": "THE HEIGHTENED SENSES", "keywords": "Intuition · Signs · Ancestral guidance · Inner knowing", "message": "Your spiritual senses are wide open. Trust your gut feelings and the subtle signs, for your ancestors are speaking directly to you.", "meaning": "The Heightened Senses is a season when your intuition is unusually sharp. Hunches land, dreams carry messages and signs keep repeating. This card says your ancestors and guides are speaking through your gut. Trust what you feel, even when you cannot explain it. Write down your dreams and the signs you notice; the pattern will become clear.", "reflection": "Which sign keeps showing up that I have been dismissing as coincidence?", "affirmation": "I trust my inner knowing, and my ancestors guide me."},
+  {"id": 27, "cat": 1, "name": "THE RESTLESS NIGHT", "keywords": "Unease · Disturbed sleep · Worry · Restore peace", "message": "Restless nights indicate spiritual disturbances or deep-seated anxiety. Cleanse your sleeping space and protect your peace of mind.", "meaning": "The Restless Night is a mind and spirit that cannot settle. Sleep is broken, worries circle and you wake up tired. This card asks you to tend to your peace. Clean and calm your bedroom, put the phone away and write the worries down before bed. If the unease is heavy and lasting, talk to someone you trust. Rest is not a luxury; it is protection.", "reflection": "What is keeping my mind awake, and what would help it put that down?", "affirmation": "My mind is calm, my space is clean, and I rest deeply."},
+  {"id": 28, "cat": 1, "name": "THE MAGNETIC AURA", "keywords": "Attraction · Abundance · Luck · Peak energy", "message": "Your aura is highly magnetic. You are currently a powerful focal point, effortlessly pulling wealth, love, and luck into your orbit.", "meaning": "The Magnetic Aura is attraction at its peak. Your energy is strong and bright, and money, love and luck are moving toward you with very little effort. This card says now is the time to put yourself forward. Pitch the idea, ask for the date, raise your price. When your aura is this magnetic, the right things say yes.", "reflection": "What would I go after if I knew it was already drawn to me?", "affirmation": "I am a magnet for love, wealth and good fortune."},
+  {"id": 29, "cat": 1, "name": "THE MIRROR CONDITION", "keywords": "Karma · Reflection · Protection · Return to sender", "message": "The mirror is activated. Any negativity sent your way is violently bouncing back to its sender, while your good deeds multiply.", "meaning": "The Mirror Condition is karma at work. Whatever is sent toward you returns to the one who sent it, and the good you put out comes back multiplied. This card says you do not need to seek revenge. Stay clean in your own actions and let the mirror handle the rest. Your best protection now is simply to keep doing good.", "reflection": "Am I trusting the mirror, or am I trying to handle everything myself?", "affirmation": "Only good reaches me, and what I give returns to me multiplied."},
+  {"id": 30, "cat": 1, "name": "THE CROWNED MASTER", "keywords": "Mastery · Self-command · Victory · Authority", "message": "You have mastered your conditions. You are the ruler of your own destiny, crowned with wisdom, power, and absolute authority.", "meaning": "The Crowned Master is the state of being in charge of your own energy. You are no longer pushed around by circumstances; you set the tone. This card says you have earned this through everything you have walked through. Lead with the wisdom you gained, use your power kindly and keep your crown straight. This card completes The Conditions.", "reflection": "Where am I ready to take full authority over my own life?", "affirmation": "I am the master of my conditions and the ruler of my destiny."},
+  {"id": 31, "cat": 2, "name": "THE HIDDEN SERPENT", "keywords": "Betrayal · False friend · Hidden motives · Stay alert", "message": "Beware the snake in the grass. Someone close to you is hiding toxic intentions behind a friendly smile.", "meaning": "The Hidden Serpent is someone close who does not wish you well. They smile in your face and work against you behind your back. This card does not ask you to suspect everyone; it asks you to watch more carefully. Notice who is curious about your plans but never happy about your wins. Share less, protect your business, and let people's actions show you who they are.", "reflection": "Who in my circle feels warm in words but cold in actions?", "affirmation": "I see clearly who is for me, and I keep my circle safe."},
+  {"id": 32, "cat": 2, "name": "THE WHISPERING SHADOWS", "keywords": "Gossip · Slander · Rumours · Guard your name", "message": "Gossip and slander are swirling around your name. Guard your secrets and do not trust everything you hear.", "meaning": "The Whispering Shadows are rumours moving behind your back. Someone is talking about you, twisting your story or spreading lies out of envy. This card asks you to stay calm and guard what you share. Do not feed the gossip by reacting to it. Let your conduct speak, keep your private life private and be careful about repeating what you hear about others.", "reflection": "What am I sharing that gives others material to talk about?", "affirmation": "My name is protected, and my actions speak louder than whispers."},
+  {"id": 33, "cat": 2, "name": "THE EVIL EYE", "keywords": "Envy · Jealousy · Negative attention · Protection", "message": "Your success has attracted the evil eye. Envious onlookers are projecting heavy negativity; it is time to protect your energy.", "meaning": "The Evil Eye is the weight of envy. Your progress has been noticed, and not everyone who is watching is happy for you. This card says the heaviness you feel may be other people's jealousy. Protect yourself: share wins with fewer people, keep your blessings quiet until they are secure, and cleanse your energy often. Their envy is proof you are moving.", "reflection": "Which of my blessings would be safer kept quiet for now?", "affirmation": "I am shielded from envy, and my success is protected."},
+  {"id": 34, "cat": 2, "name": "THE FALSE PROPHET", "keywords": "Scam · False guide · Manipulation · Check credentials", "message": "Do not be fooled by charismatic words. A false guide or scammer is trying to lead you astray for their own gain.", "meaning": "The False Prophet is someone who sounds wise but is really after what you have. It could be a teacher, an adviser, a deal-maker or a spiritual guide who makes big promises. This card warns you to check before you trust. Charisma is not proof. Look at results, ask for evidence and never hand over money or power because someone made you feel special.", "reflection": "Whose promises have I accepted without checking the evidence?", "affirmation": "I trust wisely, and no false guide can lead me astray."},
+  {"id": 35, "cat": 2, "name": "THE GATHERING STORM", "keywords": "Coming trouble · Conflict ahead · Prepare · Stay grounded", "message": "The clouds are turning black. A chaotic storm of conflict or sudden trouble is approaching; anchor yourself deeply.", "meaning": "The Gathering Storm is trouble on the horizon. A conflict, a crisis or a period of chaos is building, and it may arrive soon. This card is a warning, not a verdict. Use the time you have to prepare: secure your money, mend what you can, gather your support and ground yourself. Storms pass, and the ones you prepare for do far less damage.", "reflection": "What can I secure now, before the storm arrives?", "affirmation": "I am grounded and prepared, and I stand firm through any storm."},
+  {"id": 36, "cat": 2, "name": "THE THIEF IN THE NIGHT", "keywords": "Loss · Theft · Stolen ideas · Guard your valuables", "message": "Guard your resources carefully. Something valuable—be it your money, energy, or ideas—is at risk of being stolen.", "meaning": "The Thief in the Night is a warning about loss. Money, possessions, credit for your work or even your time and energy are at risk of being taken. This card asks you to lock things down. Check your accounts, protect your passwords, put your ideas in writing and notice who drains you without giving back. A little caution now prevents a painful loss later.", "reflection": "Where am I leaving something valuable unguarded?", "affirmation": "My resources are protected, and what is mine stays mine."},
+  {"id": 37, "cat": 2, "name": "THE SWEET POISON", "keywords": "Temptation · Toxic attachment · Bad habit · Walk away", "message": "It looks tempting, but it will destroy you. Step away from the sweet poison before it heavily damages your spirit.", "meaning": "The Sweet Poison is something that feels good and does harm. It could be a relationship, a habit or a situation you keep returning to because it tastes sweet in the moment. This card asks you to be honest about the cost. Pleasure that leaves you weaker is not love or reward. Step back, get support if you need it, and choose what nourishes you instead.", "reflection": "What do I keep returning to even though it leaves me worse off?", "affirmation": "I choose what nourishes me, and I release what poisons me."},
+  {"id": 38, "cat": 2, "name": "THE BROKEN MIRROR", "keywords": "Distortion · Breaking point · Lost confidence · Rebuild", "message": "A fractured reality. Your perception is distorted, or a significant relationship is on the verge of shattering completely.", "meaning": "The Broken Mirror is a picture that has cracked. Your view of yourself or a situation may be distorted, or an important relationship is close to breaking. This card asks you to look carefully at what is real. Do not judge yourself by a cracked reflection. Get an honest outside view, decide what can be repaired, and accept what cannot. Pieces can be rebuilt into something truer.", "reflection": "Is the way I see this situation, or myself, actually accurate?", "affirmation": "I see myself clearly, and I rebuild what matters."},
+  {"id": 39, "cat": 2, "name": "THE TANGLED WEB", "keywords": "Drama · Lies · Entanglement · Cut loose", "message": "You are caught in a messy, complicated web of lies and drama. Cut the cords immediately before you are trapped.", "meaning": "The Tangled Web is a mess that is pulling you in. Someone else's lies, gossip or drama has caught you, and the more you struggle inside it, the more tangled it gets. This card asks you to step out, not sort it out. Stop explaining, stop taking sides and stop carrying messages. Cut the cords cleanly and let the people who made the web untangle it themselves.", "reflection": "Whose drama am I involved in that is not mine to fix?", "affirmation": "I step out of every web that is not mine, and I walk free."},
+  {"id": 40, "cat": 2, "name": "THE EMPTY CHALICE", "keywords": "Disappointment · One-sided giving · Empty promises · Refill yourself", "message": "You are pouring from an empty cup. The situation or person you are investing in will give you absolutely nothing in return.", "meaning": "The Empty Chalice is giving that never comes back. You are pouring love, money or effort into a person or situation that has nothing to return. This card asks you to stop and look at the balance. Empty promises will stay empty. Take your cup back, refill yourself first and give only where your giving is valued and returned.", "reflection": "Where am I giving far more than I receive?", "affirmation": "I keep my cup full, and I pour only where love flows back."},
+  {"id": 41, "cat": 2, "name": "THE FALLING TOWER", "keywords": "Collapse · Shock · Truth exposed · Clearing", "message": "Sudden, shocking collapse. A foundation built on lies is falling apart to clear the debris and reveal the brutal truth.", "meaning": "The Falling Tower is a sudden collapse. A plan, a relationship or a structure that looked solid comes down, often because it was built on something false. This card is hard, but it is also honest. What falls now was never going to hold. Let the dust settle, take in the truth that is exposed and build again on ground you can trust.", "reflection": "What in my life was built on something that was never true?", "affirmation": "When false foundations fall, I rebuild on the truth."},
+  {"id": 42, "cat": 2, "name": "THE SIREN'S CALL", "keywords": "Distraction · Seduction · Illusion · Stay focused", "message": "Do not be distracted by the illusion. A beautiful temptation is trying to lure you off your destined path of success.", "meaning": "The Siren's Call is a beautiful distraction. A person, an offer or a desire is pulling you away from what you are building. This card asks you to remember your goal. Temptation is strongest when you are close to success. Enjoy beauty without letting it steer you. If something asks you to abandon your path to follow it, it is not your path.", "reflection": "What is pulling my attention away from what I am meant to build?", "affirmation": "I stay focused on my destiny, and no illusion can lure me away."},
+  {"id": 43, "cat": 2, "name": "THE MASKED FIGURE", "keywords": "Hidden agenda · Concealment · Mystery · Ask for transparency", "message": "Hidden identities and concealed motives. The person you are dealing with is wearing a mask; demand absolute transparency.", "meaning": "The Masked Figure is someone who is not showing their real face. Their motives, their history or their true feelings are hidden, and you do not have the full story about them or the deal on the table. This card asks you to slow down and ask for transparency. Do not commit until the mask comes off. People with good intentions do not mind being seen.", "reflection": "What do I still not know about the person or deal in front of me?", "affirmation": "Masks fall away in my presence, and the truth stands revealed."},
+  {"id": 44, "cat": 2, "name": "THE WITHERED ROOT", "keywords": "Old wounds · Family patterns · Weak foundation · Heal the root", "message": "The foundation is dying. You must address the deep-rooted, ancestral, or financial rot before the entire tree collapses.", "meaning": "The Withered Root is a problem at the base of things. It may be an old family pattern, an unhealed wound, a business with no real backing or money habits that are slowly draining you. This card says you cannot fix the branches while the root is sick. Go to the source. Face the pattern, get help if you need it and start healing from the ground up.", "reflection": "What old pattern keeps repeating no matter how I change the surface?", "affirmation": "I heal my roots, and my whole life grows strong."},
+  {"id": 45, "cat": 2, "name": "THE RED FLAG", "keywords": "Warning sign · Intuition · Danger · Do not ignore", "message": "The signs are glaringly obvious. Stop ignoring the red flags; your intuition is violently trying to protect you from danger.", "meaning": "The Red Flag is your intuition shouting. The warning signs have been there, and part of you already knows something is wrong. This card asks you to stop explaining them away. Take the signs seriously, step back from what feels unsafe and trust that your gut is protecting you. It is far easier to walk away now than later. This card completes The Warnings.", "reflection": "Which red flag have I been explaining away?", "affirmation": "I honour my intuition, and it keeps me safe."},
+  {"id": 46, "cat": 3, "name": "THE SPIRITUAL BATH", "keywords": "Cleansing · Reset · Renewal · Fresh start", "message": "Cleanse your spirit and wash away the heavy debris. A spiritual bath will reset your aura and restore your divine glow.", "meaning": "The Spiritual Bath is the remedy of cleansing. Bad luck, heaviness and the leftovers of hard days have stuck to you, and it is time to wash them off. This card asks you to reset, body and spirit. Take a slow bath with salt or herbs, set an intention as you wash and pour the water away from you. Then begin again, clean and bright.", "reflection": "What heaviness am I ready to wash away?", "affirmation": "I am cleansed and renewed, and my light shines again."},
+  {"id": 47, "cat": 3, "name": "THE SWIFT REVERSAL", "keywords": "Return to sender · Reversal · Protection · Justice", "message": "Return to sender. The negative energy thrown at you is rapidly reversing and violently striking back at its source.", "meaning": "The Swift Reversal is negative energy turning back to where it came from. What was aimed at you will not land; it returns to its source. This card says you do not need to fight or curse anyone back. Stay protected, keep your own hands clean and let the reversal do its work. Justice moves fastest when you step out of its way.", "reflection": "What can I stop trying to fight, and trust to return to its source?", "affirmation": "What is sent against me returns to its source, and I stay in peace."},
+  {"id": 48, "cat": 3, "name": "THE CUT AND CLEAR", "keywords": "Cord cutting · Endings · Boundaries · Clean break", "message": "Sever the toxic ties permanently. Use the blade of truth to cut away what drains you and clear your space for new blessings.", "meaning": "The Cut and Clear is a clean break. A person, an attachment or a memory has been draining you, and it is time to cut the cord for good. This card asks for decisiveness, not drama. Block, delete, return what is theirs and stop checking in. Then clear the space with fresh air, clean surfaces and new routines so something better can move in.", "reflection": "What tie am I ready to cut for good?", "affirmation": "I cut what drains me, and I make room for new blessings."},
+  {"id": 49, "cat": 3, "name": "THE ROAD OPENER", "keywords": "Opportunity · Doors opening · Breakthrough · New start", "message": "The blockages are demolished. A powerful force is clearing your path, forcing every locked door to swing wide open for you.", "meaning": "The Road Opener is the remedy for blocked paths. Doors that were locked are about to open, and the obstacles in your way are being cleared. This card says your persistence is paying off. Get ready to walk through quickly. Update your résumé, follow up on that lead, say yes to the invitation. Opportunity is on its way, and it is moving fast.", "reflection": "Which door am I ready to walk through the moment it opens?", "affirmation": "Every door I need is opening, and I walk through with confidence."},
+  {"id": 50, "cat": 3, "name": "THE ANCESTRAL INTERVENTION", "keywords": "Ancestral help · Miracles · Divine backing · Let go", "message": "Your ancestors have stepped onto the battlefield. Stand down and watch as they violently remove the obstacles in your way.", "meaning": "The Ancestral Intervention is help from the ones who came before you. Your ancestors and guides have seen enough and are stepping in on your behalf. This card says you are not fighting alone. Let go of trying to control every part of this. Light a candle, say their names, offer thanks and watch for the miracle that moves what you could not move yourself.", "reflection": "Where can I hand the fight over to my ancestors and guides?", "affirmation": "My ancestors walk before me, and their strength clears my way."},
+  {"id": 51, "cat": 3, "name": "THE MOJO HAND", "keywords": "Luck · Protection · Personal power · Confidence", "message": "Carry your power with you. A concentrated dose of luck, protection, and magnetic attraction is securely in your grasp.", "meaning": "The Mojo Hand is power you carry with you. Traditionally it is a small charm bag of luck and protection; in a reading it means your confidence, skill and good fortune are in your hands right now. This card asks you to carry yourself like someone who is blessed. Keep a token that reminds you of your power, walk into rooms with intention and expect good luck.", "reflection": "What reminds me of my power, and do I carry it with me?", "affirmation": "I carry my luck and protection with me wherever I go."},
+  {"id": 52, "cat": 3, "name": "THE SWEEPING BROOM", "keywords": "Clean house · Clear out · Fresh energy · New beginnings", "message": "Sweep away the stagnant energy and the lingering negativity. Clean house physically and spiritually to invite fresh miracles.", "meaning": "The Sweeping Broom is the remedy of clearing out. Old energy, clutter and unwelcome influences are lingering in your home and your life. This card asks you to clean house, literally and spiritually. Sweep from the back of the home toward the front door, throw out what is broken and let go of what has overstayed. A swept space invites new blessings in.", "reflection": "What needs sweeping out of my home and my life?", "affirmation": "I clear my space, and fresh miracles find their way in."},
+  {"id": 53, "cat": 3, "name": "THE MIDNIGHT FIRE", "keywords": "Release · Transformation · Petition · Prayer answered", "message": "Burn the past and send your petitions to the sky. The holy fire is consuming your worries and transmuting them into power.", "meaning": "The Midnight Fire is the remedy of release and transformation. What you have been holding, your worries, your grief and your requests, is ready to be handed to the flame. This card says your petition has been heard. Write down what you want to release and what you are asking for, burn it safely and let it go. Fire turns what was heavy into power.", "reflection": "What am I ready to hand over to the fire?", "affirmation": "I release my worries to the flame, and my prayers are answered."},
+  {"id": 54, "cat": 3, "name": "THE MASTER ROOT", "keywords": "Advantage · Victory · Authority · Winning position", "message": "You hold the ultimate advantage. Step into your authority, command the room, and claim your guaranteed victory.", "meaning": "The Master Root is the upper hand. Named for the root traditionally carried for victory and confidence, this card says you are in the winning position in a negotiation, a dispute or a competition. Step into your authority. Know your worth, state your terms and do not shrink to make others comfortable. Victory favours the one who claims it with calm confidence.", "reflection": "Where am I underplaying the advantage I already hold?", "affirmation": "I hold the advantage, and I claim my victory with confidence."},
+  {"id": 55, "cat": 3, "name": "THE IRON NAIL", "keywords": "Stability · Firm boundaries · Containment · Hold steady", "message": "Nail down the chaotic energy. Your boundaries are forged in iron; the situation is stabilized, and your enemies are paralyzed.", "meaning": "The Iron Nail is the remedy of holding things in place. A chaotic situation is being stabilised, a problem is stopped from spreading and people who meant you harm can no longer move against you. This card asks you to set firm boundaries and keep them. Say no and mean it. Stability now gives you the solid ground you need to build on.", "reflection": "What boundary do I need to set, and hold, without apology?", "affirmation": "My boundaries are strong, and my life stands steady."},
+  {"id": 56, "cat": 3, "name": "THE CLEANSING WATER", "keywords": "Purification · Space clearing · Peace · Sweetness returns", "message": "Purify your environment. A sweet, sacred wash is required to lift the heavy vibrations and invite divine sweetness back in.", "meaning": "The Cleansing Water is the remedy of a purified space. Your home or workplace is holding heavy energy, and it is affecting your mood and luck. This card asks you to cleanse it. Open the windows, wash the floors with a fragrant water, refresh the corners and set a peaceful intention. When your space is sweet again, peace and good fortune return.", "reflection": "Which space in my life feels heavy and needs clearing?", "affirmation": "My space is pure and peaceful, and sweetness flows back in."},
+  {"id": 57, "cat": 3, "name": "THE DIRT PAYMENT", "keywords": "Offering · Gratitude · Fair exchange · Give back", "message": "Pay your spiritual debts. Leave a respectful offering at the crossroads, and the spirits will gladly grant your request.", "meaning": "The Dirt Payment is the remedy of giving back. Traditionally an offering is left when you ask the spirit world for help; in a reading it means fair exchange opens the way. This card asks you to give before you ask: thanks, charity, kindness or a respectful offering. Settle what you owe, honour those who helped you, and your request will be welcomed.", "reflection": "What do I owe, in gratitude or in action, before I ask for more?", "affirmation": "I give with an open heart, and the way opens for me."},
+  {"id": 58, "cat": 3, "name": "THE CANDLE VIGIL", "keywords": "Faith · Persistence · Prayer · Hope", "message": "Keep the faith burning bright. Your focused prayers and continuous vigilance are manifesting a massive breakthrough.", "meaning": "The Candle Vigil is the remedy of steady faith. You may be tired of waiting, but your prayers and consistent effort are working, even if you cannot see it yet. This card asks you to keep the light burning. Light a candle, hold your intention daily and do not give up right before the breakthrough. Hope kept alive leads you out of the dark.", "reflection": "What intention am I ready to keep alight every single day?", "affirmation": "I keep my faith burning, and my breakthrough is near."},
+  {"id": 59, "cat": 3, "name": "THE SALT LINE", "keywords": "Boundaries · Protection · Self-respect · No more", "message": "Draw a hard line in the sand. Establish unbreakable boundaries to protect your peace, your property, and your energy.", "meaning": "The Salt Line is the remedy of a clear boundary. Traditionally salt is laid across a doorway to keep harm out; in a reading it means you are done tolerating what disrespects you. This card asks you to draw the line and make it known. Protect your time, your home and your energy. The people who belong in your life will respect it.", "reflection": "What am I no longer willing to tolerate?", "affirmation": "I draw my line with love and firmness, and my peace is protected."},
+  {"id": 60, "cat": 3, "name": "THE DIVINE BREAKTHROUGH", "keywords": "Liberation · Victory · Fresh start · Light", "message": "The chains are broken! You have conquered the conditions, defeated the darkness, and emerged completely victorious. Step into your light.", "meaning": "The Divine Breakthrough is the final card of the deck and its greatest victory. The chains are broken, the crossed conditions are gone and you have come through every trial. This card says you are free. Step into your light without apology. Celebrate how far you have come, and walk forward into the life that was waiting on the other side. This card completes The Interventions.", "reflection": "How will I step into my light now that the chains are broken?", "affirmation": "I am free, I am victorious and I walk boldly in my light."}
+];
+
+// -- DECK STATE --
+let shuffledDeck = [...CARDS];
+let drawnIndex = 0;
+let currentCard = null;
+let currentView = 'deck';
+let cardOrigin = 'deck';          // deck | spread | all | history
+const STORE = 'ccor_';
+
+const preloaded = {};
+
+function preload(cards) {
+  cards.forEach(c => {
+    if (!c || preloaded[c.id]) return;
+    const img = new Image();
+    img.src = c.id + '.webp';
+    preloaded[c.id] = img;
+  });
+}
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// -- ACCESS CONTROL --
+const VALID_CODE = 'CROSS2026';
+
+function unlock() {
+  document.getElementById('access-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
+  initDeck();
+}
+
+function checkCode() {
+  var rawInput = document.getElementById('code-input').value;
+  var input = rawInput.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
+  if (input === VALID_CODE) {
+    try { localStorage.setItem(STORE + 'unlocked', '1'); } catch (e) {}
+    unlock();
+  } else {
+    var err = document.getElementById('error-msg');
+    err.style.display = 'block';
+    document.getElementById('code-input').style.borderColor = '#E0857C';
+    setTimeout(function() {
+      err.style.display = 'none';
+      document.getElementById('code-input').style.borderColor = '';
+    }, 3000);
+  }
+}
+
+document.getElementById('code-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') checkCode();
+});
+
+// -- INIT --
+function initDeck() {
+  shuffledDeck = shuffleArray([...CARDS]);
+  drawnIndex = 0;
+  preload(shuffledDeck.slice(0, 3));
+  [updateCounter, buildCategoryTabs, () => buildAllCards(CARDS), initSpread]
+    .forEach(step => { try { step(); } catch (e) { console.error('init step failed:', e); } });
+}
+
+function updateCounter() {
+  const remaining = shuffledDeck.length - drawnIndex;
+  document.getElementById('counter').textContent = `${remaining} Cards`;
+}
+
+// -- VIEWS --
+function switchView(view) {
+  currentView = view;
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  ['deck-view', 'card-view', 'all-cards-view', 'spread-view', 'history-view']
+    .forEach(id => { document.getElementById(id).style.display = 'none'; });
+
+  if (view === 'deck') {
+    document.getElementById('deck-view').style.display = 'flex';
+    document.getElementById('nav-deck').classList.add('active');
+  } else if (view === 'card') {
+    document.getElementById('card-view').style.display = 'flex';
+    updateCardActions();
+    const navId = cardOrigin === 'spread' ? 'nav-spread'
+                : cardOrigin === 'all' ? 'nav-all'
+                : cardOrigin === 'history' ? 'nav-history' : 'nav-deck';
+    document.getElementById(navId).classList.add('active');
+  } else if (view === 'all') {
+    document.getElementById('all-cards-view').style.display = 'flex';
+    document.getElementById('nav-all').classList.add('active');
+  } else if (view === 'spread') {
+    document.getElementById('spread-view').style.display = 'flex';
+    document.getElementById('nav-spread').classList.add('active');
+  } else if (view === 'history') {
+    document.getElementById('history-view').style.display = 'flex';
+    document.getElementById('nav-history').classList.add('active');
+    renderHistory();
+  }
+  window.scrollTo(0, 0);
+}
+
+function showDeck() { switchView('deck'); }
+
+function updateCardActions() {
+  const box = document.getElementById('card-view-actions');
+  box.innerHTML = '';
+  const add = (label, cls, fn) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'btn ' + cls;
+    b.textContent = label;
+    b.onclick = fn;
+    box.appendChild(b);
+  };
+  if (cardOrigin === 'spread') {
+    add('← Back to the Spread', 'btn-primary', () => switchView('spread'));
+  } else if (cardOrigin === 'all') {
+    add('← Back to All Cards', 'btn-primary', () => switchView('all'));
+  } else if (cardOrigin === 'history') {
+    add('← Back to Journal', 'btn-primary', () => switchView('history'));
+  } else {
+    add('Pull Another', 'btn-primary', drawCard);
+    add('Back to Deck', 'btn-secondary', showDeck);
+  }
+}
+
+// -- SHUFFLE --
+function shuffleDeck() {
+  const pile = document.getElementById('deck-pile');
+  pile.classList.add('shuffling');
+  setTimeout(() => { pile.classList.remove('shuffling'); }, 1800);
+  shuffledDeck = shuffleArray([...CARDS]);
+  drawnIndex = 0;
+  preload(shuffledDeck.slice(0, 3));
+  updateCounter();
+}
+
+// -- DRAW --
+function drawCard() {
+  if (drawnIndex >= shuffledDeck.length) {
+    shuffledDeck = shuffleArray([...CARDS]);
+    drawnIndex = 0;
+  }
+  currentCard = shuffledDeck[drawnIndex++];
+  cardOrigin = 'deck';
+  preload(shuffledDeck.slice(drawnIndex, drawnIndex + 3));
+  updateCounter();
+  showCardUnrevealed(currentCard);
+  document.getElementById('drawn-count').textContent = `Card ${drawnIndex} of ${CARDS.length}`;
+  switchView('card');
+}
+
+function showCardUnrevealed(card) {
+  cardRevealed = false;
+  const backEl = document.getElementById('card-back-el');
+  const faceEl = document.getElementById('card-face');
+  backEl.style.display = 'flex';
+  faceEl.style.display = 'none';
+  renderCardFace(card, faceEl);
+  document.getElementById('reading-panel').style.display = 'none';
+  document.getElementById('reading-panel').innerHTML = '';
+  document.getElementById('reading-hint').style.display = 'none';
+}
+
+function renderCardFace(card, el) {
+  el.innerHTML = `<img src="${card.id}.webp" alt="${card.name}" onerror="this.onerror=null; this.src='';">`;
+}
+
+function renderReadingPanel(card) {
+  const panel = document.getElementById('reading-panel');
+  panel.innerHTML = `
+    <div class="reading-category">${CATEGORIES[card.cat]} · No. ${card.id}</div>
+    <div class="reading-name">${card.name}</div>
+    <div class="reading-keywords">${card.keywords}</div>
+    <div class="card-section-label">✦ The Card Speaks</div>
+    <div class="card-message">${card.message}</div>
+    <div class="card-section-label">◆ The Crossroads Reading</div>
+    <div class="card-meaning">${card.meaning}</div>
+    <div class="card-section-label">❖ Sit With It</div>
+    <div class="card-reflection">${card.reflection}</div>
+    <div class="card-affirmation">“${card.affirmation}”</div>
+    <div class="card-footer-brand">PsychicSoulStar · Crossroads &amp; Conditions Oracle</div>
+  `;
+  panel.style.display = 'block';
+  document.getElementById('reading-hint').style.display = 'block';
+}
+
+let cardRevealed = false;
+
+function flipCard() {
+  if (!currentCard) return;
+  if (cardRevealed) {
+    cardRevealed = false;
+    document.getElementById('card-back-el').style.display = 'flex';
+    document.getElementById('card-face').style.display = 'none';
+    document.getElementById('reading-panel').style.display = 'none';
+    document.getElementById('reading-hint').style.display = 'none';
+    return;
+  }
+  cardRevealed = true;
+  document.getElementById('card-back-el').style.display = 'none';
+  document.getElementById('card-face').style.display = 'block';
+  if (cardOrigin === 'deck') logDraw(currentCard, 'Daily pull');
+  renderReadingPanel(currentCard);
+}
+
+// -- ALL CARDS --
+let activeCategory = 'all';
+
+function buildCategoryTabs() {
+  const container = document.getElementById('cat-tabs');
+  container.innerHTML = '';
+  const allBtn = document.createElement('button');
+  allBtn.className = 'cat-tab active';
+  allBtn.textContent = 'All 60';
+  allBtn.onclick = () => filterByCategory('all', allBtn);
+  container.appendChild(allBtn);
+
+  CATEGORIES.forEach((name, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'cat-tab';
+    btn.textContent = CAT_TABS[i];
+    btn.onclick = () => filterByCategory(i, btn);
+    container.appendChild(btn);
+  });
+}
+
+function filterByCategory(cat, btn) {
+  activeCategory = cat;
+  document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterCards(document.getElementById('search-input').value);
+}
+
+function filterCards(term) {
+  if (term === undefined) term = document.getElementById('search-input').value;
+  const lower = term.toLowerCase().trim();
+  const filtered = CARDS.filter(c => {
+    const matchCat = activeCategory === 'all' || c.cat === activeCategory;
+    const matchSearch = !lower || c.name.toLowerCase().includes(lower) ||
+      c.message.toLowerCase().includes(lower) || c.keywords.toLowerCase().includes(lower) ||
+      c.meaning.toLowerCase().includes(lower);
+    return matchCat && matchSearch;
+  });
+  buildAllCards(filtered);
+}
+
+function buildAllCards(cards) {
+  const grid = document.getElementById('cards-grid');
+  grid.innerHTML = '';
+  if (!cards.length) {
+    grid.innerHTML = '<p class="history-empty" style="grid-column:1/-1">No card matches that search.</p>';
+    return;
+  }
+  cards.forEach(card => {
+    const el = document.createElement('div');
+    el.className = 'mini-card';
+    el.onclick = () => openCardFromList(card, 'all');
+    el.innerHTML = `
+      <img class="mini-thumb" src="${card.id}.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+      <div class="mini-body">
+        <div class="mini-card-num">No. ${card.id} · ${CATEGORIES[card.cat]}</div>
+        <div class="mini-card-name">${card.name}</div>
+        <div class="mini-card-truth">${card.keywords}</div>
+      </div>
+    `;
+    grid.appendChild(el);
+  });
+}
+
+function openCardFromList(card, origin) {
+  currentCard = card;
+  cardOrigin = origin || 'all';
+  showCardUnrevealed(card);
+  document.getElementById('drawn-count').textContent = `Card No. ${card.id}`;
+  switchView('card');
+  flipCard();
+}
+
+// -- JOURNAL / DRAW LOG (localStorage) --
+const HKEY = STORE + 'history';
+
+function loadHistory() {
+  try { return JSON.parse(localStorage.getItem(HKEY) || '[]'); }
+  catch (e) { return []; }
+}
+
+function saveHistory(h) {
+  try { localStorage.setItem(HKEY, JSON.stringify(h.slice(-300))); }
+  catch (e) { console.error('journal save failed:', e); }
+}
+
+function logDraw(card, context) {
+  if (!card) return;
+  const h = loadHistory();
+  const last = h[h.length - 1];
+  const now = Date.now();
+  // ignore an identical entry within a few seconds (double taps, re-flips)
+  if (last && last.id === card.id && last.context === context && now - last.t < 5000) return;
+  h.push({ t: now, id: card.id, name: card.name, context: context, note: '' });
+  saveHistory(h);
+}
+
+function dayLabel(ts) {
+  const d = new Date(ts), t = new Date();
+  const same = (a, b) => a.toDateString() === b.toDateString();
+  const y = new Date(t.getTime() - 86400000);
+  if (same(d, t)) return 'Today';
+  if (same(d, y)) return 'Yesterday';
+  return d.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function timeLabel(ts) {
+  return new Date(ts).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+}
+
+function renderHistory() {
+  const h = loadHistory();
+  const sum = document.getElementById('history-summary');
+  const list = document.getElementById('history-list');
+
+  if (!h.length) {
+    sum.style.display = 'none';
+    list.innerHTML = '<p class="history-empty">Your journal is still empty.<br>' +
+      'Every card you pull is saved here automatically.</p>';
+    return;
+  }
+  sum.style.display = 'block';
+
+  const counts = {};
+  h.forEach(e => { counts[e.name] = (counts[e.name] || 0) + 1; });
+  const repeats = Object.keys(counts).filter(n => counts[n] > 1)
+    .sort((a, b) => counts[b] - counts[a]).slice(0, 3);
+
+  sum.innerHTML =
+    '<div class="history-summary-top">' +
+      '<div class="history-count">' + h.length + '<span>pulls</span></div>' +
+      '<div class="history-count">' + Object.keys(counts).length + '<span>cards seen</span></div>' +
+    '</div>' +
+    (repeats.length
+      ? '<div class="history-label">Cards that keep coming back</div><div class="history-repeat">' +
+        repeats.map(n => '<b>' + n + '</b> · ' + counts[n] + ' times').join('<br>') + '</div>'
+      : '<div class="history-repeat" style="opacity:0.6">No card has repeated yet.</div>');
+
+  let html = '', lastDay = '';
+  h.slice().reverse().forEach(e => {
+    const d = dayLabel(e.t);
+    if (d !== lastDay) { html += '<div class="history-day">' + d + '</div>'; lastDay = d; }
+    const note = (e.note || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+    html +=
+      '<div class="history-entry">' +
+        '<img class="history-thumb" src="' + e.id + '.webp" alt="" data-card="' + e.id + '">' +
+        '<div class="history-body">' +
+          '<div class="history-name" data-card="' + e.id + '">' + e.name + '</div>' +
+          '<div class="history-meta">' + timeLabel(e.t) + ' · ' + e.context + '</div>' +
+          '<input class="history-note" data-t="' + e.t + '" value="' + note + '"' +
+                ' placeholder="What did it reveal for you?">' +
+        '</div>' +
+      '</div>';
+  });
+  list.innerHTML = html;
+  list.querySelectorAll('.history-thumb').forEach(img => {
+    img.onerror = function () { this.style.visibility = 'hidden'; };
+  });
+}
+
+// notes save as they are typed; thumbnails and names open the full reading
+document.getElementById('history-list').addEventListener('change', function (e) {
+  const inp = e.target.closest('.history-note');
+  if (!inp) return;
+  const t = Number(inp.dataset.t);
+  const h = loadHistory();
+  const row = h.find(x => x.t === t);
+  if (row) { row.note = inp.value; saveHistory(h); }
+});
+
+document.getElementById('history-list').addEventListener('click', function (e) {
+  const el = e.target.closest('[data-card]');
+  if (!el) return;
+  const card = CARDS.find(c => c.id === Number(el.dataset.card));
+  if (card) openCardFromList(card, 'history');
+});
+
+const NL = String.fromCharCode(10);
+
+function exportHistory(btn) {
+  const h = loadHistory();
+  if (!h.length) return;
+  const lines = ['CROSSROADS & CONDITIONS ORACLE — MY JOURNAL', ''];
+  let lastDay = '';
+  h.forEach(e => {
+    const d = dayLabel(e.t);
+    if (d !== lastDay) { lines.push('', d.toUpperCase()); lastDay = d; }
+    lines.push('  ' + timeLabel(e.t) + '  ' + e.name + '  (' + e.context + ')');
+    if (e.note) lines.push('      ' + e.note);
+  });
+  const text = lines.join(NL);
+  const done = () => {
+    if (!btn) return;
+    const old = btn.dataset.label || btn.textContent;
+    btn.dataset.label = old;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => { btn.textContent = old; }, 1800);
+  };
+  try {
+    navigator.clipboard.writeText(text).then(done, () => fallbackCopy(text, done));
+  } catch (err) { fallbackCopy(text, done); }
+}
+
+function fallbackCopy(text, done) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); done(); } catch (e) {}
+  document.body.removeChild(ta);
+}
+
+let clearArmed = null;
+
+function clearHistory(btn) {
+  if (!loadHistory().length) return;
+  if (!btn) { doClear(); return; }
+
+  if (!clearArmed) {                       // first tap: ask for confirmation in place
+    btn.dataset.label = btn.dataset.label || btn.textContent;
+    btn.textContent = 'Tap again to erase';
+    btn.classList.add('btn-danger');
+    clearArmed = setTimeout(() => { resetClearButton(btn); }, 5000);
+    return;
+  }
+  resetClearButton(btn);                   // second tap: do it
+  doClear();
+}
+
+function resetClearButton(btn) {
+  clearTimeout(clearArmed);
+  clearArmed = null;
+  if (btn) {
+    btn.textContent = btn.dataset.label || 'Clear';
+    btn.classList.remove('btn-danger');
+  }
+}
+
+function doClear() {
+  try { localStorage.removeItem(HKEY); } catch (e) { console.error('clear failed:', e); }
+  renderHistory();
+}
+
+// -- SPREADS --
+const SPREADS = [
+  {
+    "title": "The Daily Lantern",
+    "sub": "One card · Daily guidance",
+    "byPillar": false,
+    "note": "Pull one card each morning. Carry it like a lantern through your day, and notice where its message lights the way.",
+    "positions": [
+      {
+        "name": "Today's Lantern",
+        "hint": "the light to walk by today"
+      }
+    ]
+  },
+  {
+    "title": "The Three Roads",
+    "sub": "Three cards · Past, present, future",
+    "byPillar": false,
+    "note": "Read the three cards left to right as one journey: the road you came in on, the crossroads you stand at, and the road that opens ahead.",
+    "positions": [
+      {
+        "name": "The Road Behind",
+        "hint": "what brought you here"
+      },
+      {
+        "name": "The Crossroads",
+        "hint": "where you stand now"
+      },
+      {
+        "name": "The Road Ahead",
+        "hint": "where this is heading"
+      }
+    ]
+  },
+  {
+    "title": "The Condition Check",
+    "sub": "Three cards · A spiritual diagnosis",
+    "byPillar": false,
+    "note": "Use this when something feels off. Name the feeling before you pull, then read the cards as symptom, cause and cure.",
+    "positions": [
+      {
+        "name": "Your Condition",
+        "hint": "your energetic state now"
+      },
+      {
+        "name": "What Crosses You",
+        "hint": "the cause of the block"
+      },
+      {
+        "name": "The Remedy",
+        "hint": "what will clear it"
+      }
+    ]
+  },
+  {
+    "title": "The Four Movements",
+    "sub": "Four cards · One from each category",
+    "byPillar": true,
+    "note": "One card from each part of the deck, in order. Read all four as a single journey before you read any one apart.",
+    "positions": [
+      {
+        "name": "The Crossroad",
+        "hint": "the turning point you face"
+      },
+      {
+        "name": "The Condition",
+        "hint": "the state you are in"
+      },
+      {
+        "name": "The Warning",
+        "hint": "what to watch for"
+      },
+      {
+        "name": "The Intervention",
+        "hint": "how to turn it around"
+      }
+    ]
+  },
+  {
+    "title": "The Uncrossing Cross",
+    "sub": "Five cards · For a big question",
+    "byPillar": false,
+    "note": "Save this for a question that matters. Write it down before you pull, then read the five cards in order.",
+    "positions": [
+      {
+        "name": "The Heart of It",
+        "hint": "the situation as it truly is"
+      },
+      {
+        "name": "What Blocks You",
+        "hint": "the obstacle or crossing"
+      },
+      {
+        "name": "The Root",
+        "hint": "where it comes from"
+      },
+      {
+        "name": "The Remedy",
+        "hint": "what to do"
+      },
+      {
+        "name": "The Open Road",
+        "hint": "where this leads"
+      }
+    ]
+  }
+];
+
+let activeSpread = 1;                 // The Three Roads by default
+let spreadCards = [];
+let spreadRevealed = [];
+
+function initSpread() {
+  markActiveTab();
+  newSpread();
+}
+
+function markActiveTab() {
+  document.querySelectorAll('#spread-tabs .spread-tab').forEach(b => {
+    b.classList.toggle('active', Number(b.dataset.spread) === activeSpread);
+  });
+}
+
+function selectSpread(i) {
+  if (i === null || isNaN(i) || i < 0 || i >= SPREADS.length) return;
+  activeSpread = i;
+  markActiveTab();
+  newSpread();
+}
+
+// one listener on the container - survives any re-render of the buttons
+document.getElementById('spread-tabs').addEventListener('click', function (e) {
+  const btn = e.target.closest('.spread-tab');
+  if (btn) selectSpread(Number(btn.dataset.spread));
+});
+
+function newSpread() {
+  const sp = SPREADS[activeSpread];
+  const n = sp.positions.length;
+  if (sp.byPillar) {
+    // one card from each category, in category order
+    spreadCards = sp.positions.map((_, i) =>
+      shuffleArray(CARDS.filter(c => c.cat === i))[0]);
+  } else {
+    spreadCards = shuffleArray([...CARDS]).slice(0, n);
+  }
+  spreadRevealed = new Array(n).fill(false);
+  preload(spreadCards);
+  document.getElementById('spread-title').textContent = sp.title;
+  document.getElementById('spread-subtitle').textContent = sp.sub;
+  document.getElementById('spread-note').textContent = sp.note;
+  renderSpread();
+}
+
+// -- AUTO-UNLOCK: defined here, called at the very end of this script, because
+// unlock() reaches into consts that are declared further down.
+function autoUnlock() {
+  try {
+    if (localStorage.getItem(STORE + 'unlocked') === '1') unlock();
+  } catch (e) {
+    console.error('auto-unlock failed:', e);
+  }
+}
+
+function renderSpread() {
+  const sp = SPREADS[activeSpread];
+  const n = sp.positions.length;
+  const grid = document.getElementById('spread-grid');
+  const cols = n === 1 ? 1 : (n === 4 ? 2 : 3);
+  grid.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
+  grid.style.maxWidth = (n === 1 ? '200px' : (n === 4 ? '360px' : '500px'));
+  grid.innerHTML = '';
+
+  spreadCards.forEach((card, i) => {
+    const slot = document.createElement('div');
+    if (spreadRevealed[i]) {
+      slot.className = 'spread-card-slot revealed';
+      slot.innerHTML = `
+        <img class="spread-slot-img" src="${card.id}.webp" alt="${card.name}"
+             onerror="this.style.display='none';">
+        <div class="spread-slot-label">${sp.positions[i].name}</div>
+        <div class="spread-slot-hint">${sp.positions[i].hint}</div>
+        <div class="spread-slot-name">${card.name}</div>
+        <div class="spread-slot-read">Tap for the reading →</div>
+      `;
+      slot.onclick = () => openCardFromList(card, 'spread');
+    } else {
+      slot.className = 'spread-card-slot unrevealed';
+      slot.innerHTML = `<img src="card_back.webp" alt="Face-down card" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='<span class=&quot;spread-mark&quot;>✦</span>';">` +
+        '';
+      slot.onclick = () => {
+        spreadRevealed[i] = true;
+        logDraw(spreadCards[i], sp.title + ' · ' + sp.positions[i].name);
+        renderSpread();
+      };
+    }
+    grid.appendChild(slot);
+  });
+}
+
+autoUnlock();
+
+</script>
+</body>
+</html>
